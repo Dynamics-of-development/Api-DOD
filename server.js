@@ -1,7 +1,7 @@
 import Express from "express";
 import Cors from "cors";
 import dotenv from "dotenv";
-import { conectarBD } from "./db/db.js";
+import { conectarBD } from "./DB/db.js";
 import jwt from "express-jwt";
 import jwks from "jwks-rsa";
 import autorizacionEstadoUsuario from "./middleware/autorizacionEstadoUsuario.js";
