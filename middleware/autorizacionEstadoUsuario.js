@@ -4,7 +4,7 @@ import jwt_decode from "jwt-decode";
 
 const autorizacionEstadoUsuario = async (req, res, next) => {
   const token = req.headers.authorization.split("Bearer ")[1];
-  const user = jwt_decode(token)["https://backend-dod.herokuapp.com/userData"];
+  const user = jwt_decode(token)["http://localhost/userData"];
   console.log(token);
   const baseDeDatos = getDB();
   await baseDeDatos
