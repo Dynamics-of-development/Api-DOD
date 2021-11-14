@@ -18,7 +18,6 @@ const postVentas = async (datosVenta, callback) => {
     Object.keys(datosVenta).includes("vendedor")
   ) {
     const baseDeDatos = getDB();
-    //implementar codigo para crear ventas en la BD
     await baseDeDatos.collection("ventas").insertOne(datosVenta, callback);
     return "bien";
   } else {

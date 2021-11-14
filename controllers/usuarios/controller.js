@@ -9,14 +9,13 @@ const queryAllUser = async (callback) => {
 
 const postUser = async (datosUsuario, callback) => {
   const baseDeDatos = getDB();
-  //implementar codigo para crear venta en la BD
   await baseDeDatos.collection("usuarios").insertOne(datosUsuario, callback);
 };
 
 const consultarOCrearUsuario = async (req, callback) => {
   const token = req.headers.authorization.split("Bearer ")[1];
   console.log("token", jwt_decode(token));
-  const user = jwt_decode(token)["http://localhost/userData"];
+  const user = jwt_decode(token)["https://backend-dod.herokuapp.com/userData"];
   const baseDeDatos = getDB();
   await baseDeDatos
     .collection("usuarios")
