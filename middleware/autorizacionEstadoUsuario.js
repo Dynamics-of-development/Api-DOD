@@ -1,5 +1,5 @@
 import { ObjectId } from "mongodb";
-import { getDB } from "../db/db.js";
+import { getDB } from "../DB/db.js";
 import jwt_decode from "jwt-decode";
 
 const autorizacionEstadoUsuario = async (req, res, next) => {
