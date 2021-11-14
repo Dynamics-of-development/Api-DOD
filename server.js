@@ -1,5 +1,5 @@
 import Express from "express";
-import Cors from "cors";
+import cors from "cors";
 import dotenv from "dotenv";
 import { conectarBD } from "./DB/db.js";
 import jwt from "express-jwt";
@@ -16,7 +16,7 @@ const port = process.env.PORT || 5000;
 const app = Express();
 
 app.use(Express.json());
-app.use(Cors());
+app.use(cors());
 
 var jwtCheck = jwt({
   secret: jwks.expressJwtSecret({
